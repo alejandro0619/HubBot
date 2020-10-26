@@ -1,0 +1,26 @@
+{
+  "name": "BotHub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandro0619/BotHub.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandro0619/BotHub/issues"
+  },
+  "homepage": "https://github.com/alejandro0619/BotHub#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.50.0",
+    "nodemon": "^2.0.6",
+    "pornhub.js": "^0.2.2"
+  }
+}
