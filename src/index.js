@@ -21,35 +21,45 @@ bot.onText(/\/help/, msg => {
         `📃This is the command palette:\n ⚠️/search [keyword] to use pornhub's search engine to find your favorite videos! \n ⚠️/gif [keyword] gay: will send you gay gif based on your keyword`);
 
 })
-//search for gif
+
 bot.onText(/\/gif (.+)/, (msg, match)=>{
     const chatId = msg.chat.id;
+    const op = {
+        hd: true,
+        sexualOrientation : ''
+    };
     if(match[1].includes('gay')){
-        const op = {
-            sexualOrientation: 'gay'
-        };
 
-        ph.search('Gif', match[1], op)
-        .then(res =>{
-            if(res){
-                let arrayData = [];
-                for(let i =0; i < 3; i++){
-                    const { data } = res;
-                    let title = data[i].title;
-                    let url = data[i].url;
-                    let gif = data[i].webm;
-                    arrayData.push(title, url, gif);
-                }
+        op.sexualOrientation = 'gay'
 
-                bot.sendMessage(chatId, "💨Title: " + arrayData[0] +"\n" + "💨Url " + arrayData[1] +"\n" + "💨Gif: " + arrayData[2] +"\n");
-                bot.sendMessage(chatId, "💨Title: " + arrayData[3] +"\n" + "💨Url " + arrayData[4] +"\n" + "💨Gif: " + arrayData[5] +"\n");
-                bot.sendMessage(chatId, "💨Title: " + arrayData[6] +"\n" + "💨Url " + arrayData[7] +"\n" + "💨Gif: " + arrayData[8] +"\n");
-            } else{
-                bot.sendMessage(chatId, `No videos was found for ${match[1]}`)
+    } else if(match[1].includes('trans')) {
+
+        op.sexualOrientation = 'transgender';
+    } else{
+
+    delete op.sexualOrientation;
+
+    };
+    ph.search('Gif',match[1], op)
+    .then(res=>{
+        if(res){
+            let arrayData = []
+            for (let i = 0; i < 3; i++) {
+                const { data } = res;
+                let title = data[i].title;
+                let mp4 = data[i].mp4
+                arrayData.push(title, gif, mp4);
             }
-        });
-    } 
-});
+            bot.sendMessage(chatId, "🔞Title: " + arrayData[0]);
+            bot.sendDocument(chatId, arrayData[2]);
+            bot.sendMessage(chatId, "🔞Title: " + arrayData[3]);
+            bot.sendDocument(chatId, arrayData[4]);
+        }
+    })
+
+
+})
+ 
 
 // search for videos
 bot.onText(/\/search (.+)/, (msg, match) => {
