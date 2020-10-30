@@ -48,7 +48,7 @@ bot.onText(/\/gif (.+)/, (msg, match)=>{
                 const { data } = res;
                 let title = data[i].title;
                 let mp4 = data[i].mp4
-                arrayData.push(title, gif, mp4);
+                arrayData.push(title, mp4);
             }
             bot.sendMessage(chatId, "🔞Title: " + arrayData[0]);
             bot.sendDocument(chatId, arrayData[2]);
