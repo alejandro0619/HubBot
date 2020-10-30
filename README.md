@@ -25,7 +25,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## API token and basics:
+## API token, basics, and how to run the project in more details:
 [Tutorial](https://github.com/alejandro0619/BotHub/doc/README.md)
 ## Get in touch:
 You can contact me in [spaghetticodedev@gmail.com](spaghetticodedev@gmail.com).
