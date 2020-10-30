@@ -1,4 +1,4 @@
-# HubBot
+# BotHub
 
 Telegram Bot using pionxzh's npm module [Pornhub.js](https://github.com/pionxzh/Pornhub.js)
 
@@ -8,7 +8,7 @@ Telegram Bot using pionxzh's npm module [Pornhub.js](https://github.com/pionxzh/
 git clone https://github.com/alejandro0619/BotHub
 ```
  ## Install dependencies:
- Use the package manager [npm](https:/npmjs.com) to install HubBot dependencies.
+ Use the package manager [npm](https:/npmjs.com) to install BotHub dependencies.
 
 ```npm
 npm install
@@ -25,7 +25,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-## Future improvements:
-In the future i will adding some new stuff (for example search /gif project) to improve the bot!
+##API token and basics:
+[Tutorial](https://github.com/alejandro0619/BotHub/doc/README.md)
 ## Get in touch:
 You can contact me in [spaghetticodedev@gmail.com](spaghetticodedev@gmail.com).
